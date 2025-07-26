@@ -12,28 +12,46 @@ img {
 }
 .flex-container {
   display: flex;
+  align-items: stretch;
+  /*display: flex;
   margin: 10px;
   justify-content: center;
-  align-items: center;
+  align-items: center;*/
 
   height: 100vh; /* Full viewport height */
   width: 100vw;
 }
-.card {
+/*RESPONSIVE FLEXBOX*/
+.flex-item-left {
+  flex: 50%;
+  padding: 10px;
+  border-radius: 5px;
+  background-image: url("./images/image-product-desktop.jpg");
+}
+.flex-item-right {
+  flex: 50%;
+  padding: 10px;
+  border-radius: 5px;
+}
+/*.card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   background-color: hsl(0, 0%, 100%);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
+  background-position: top center;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 600px;
+  object-fit: cover;
 }
 
 .container {
-  padding: 4px 16px;
-  margin: 0;
-}
+  height: 600px; /* Controls height of the image area */
+/*width: 200px; /* Optional: controls width */
+/*width: 200px;
+  height: 300px;
+  object-fit: cover;
+  padding-top: 180px;
+}*/
 h1 {
   font-family: "Fraunces", serif;
   font-optical-sizing: auto;
@@ -118,6 +136,12 @@ button {
   color: hsl(228, 45%, 44%);
 }
 @media screen and (min-width: 375px) {
+  /* .container {
+    height: 100vh; /* Full viewport height */
+  /* width: 100vw;
+    background-image: url(./images/image-product-mobile.jpg);
+  }*/
+
   /*.topnav {
   overflow: hidden;
   background-color: #333;
@@ -125,12 +149,21 @@ button {
 
   /* Style the topnav links */
 
-  img {
+  /*img {
     border-radius: 10px 10px 0 0;
-  }
+  }*/
 }
 
-@media screen and (min-width: 1440px) {
+/*@media screen and (min-width: 1440px) {*/
+@media screen and (min-width: 1280px) {
+  /*.container {
+    display: flex;
+    flex-direction: row;
+    background-image: url(./images/image-product-desktop.jpg);
+    width: 800px;
+    height: 600px;
+  }*/
+
   .attribution {
     background-color: hsla(30, 11%, 96%, 0.8);
   }
